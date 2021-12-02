@@ -1,0 +1,30 @@
+<div class="container">
+	<div class="leftbar">
+		<ul class="contact-list">
+			<li *ngFor="let contact of contacts" (click)='changeContact(contact)' [class.active]='activeContact==contact'>{{contact.name}} <button class="button-delate" (click)='delateContact(contact)'>X</button></li>
+		</ul>
+	</div>
+	<div class="content">
+		<div class="form">
+			<dl>
+				<dt><label for="person-name-input"></label></dt>
+				<dd><input type="text" id="person-name-input" [(ngModel)]="contact.name"></dd>
+				<dt><label for="input-type"></label></dt>
+				<dd><select name="type" id="input-type"  [(ngModel)]="contact.contactType">
+					<option value="email">email</option>
+					<option value="phone">phone</option>
+				</select></dd>
+				<dt><label for="person-phone-input"></label></dt>
+				<dd><input type="text" id="person-phone-input" [(ngModel)]="contact.contactValue"></dd>
+				<dd><button (click)="addContact()">Add</button></dd>
+			</dl>
+		</div>
+		<div class="chosen-contacts">
+			<div class="chosen-contact" *ngIf='activeContact!==null'>
+				<div class="person-name">{{activeContact.name}}</div>
+				<div class="contact-type">{{activeContact.contactType}}</div>
+				<div class="person-contact">{{activeContact.contactValue}}</div>
+			</div>
+		</div>
+	</div>
+</div>
