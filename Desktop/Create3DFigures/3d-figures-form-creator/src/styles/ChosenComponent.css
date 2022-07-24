@@ -1,0 +1,17 @@
+.chosen-shape-container {
+    background-color: #494C5E;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    display: flex;
+    height: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 30px 15px;
+  
+}
+
+.chosen-shape-container div {
+    padding: 10px;
+}

@@ -1,0 +1,12 @@
+.list-container {
+    background-color: #7B809D;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 30px 15px;
+    height: 100%;
+    min-height: 100vh;
+}
+
